@@ -1,6 +1,6 @@
 <template>
     <div class="user-list">
-        <table border="1">
+        <table border="10">
             <tr>
                 <th>User</th>
                 <th>Email</th>
@@ -42,7 +42,7 @@ export default {
           // Note the nullish operator - I noticed that this method gets called even before the roles have been fetched!
         },
         editUser(id){
-            console.log("TODO: edit user " + id);
+        this.$router.push({name:'UserDetails', params: {userId:id}});
         }
     }
 }
