@@ -1,5 +1,6 @@
 <template>
     <div class="user-list">
+        <button @click="$router.push({name: 'AddUser' })">Add New User</button>
         <table border="10">
             <tr>
                 <th>User</th>

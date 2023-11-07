@@ -20,6 +20,11 @@ const routes = [
     component: UserDetails, 
     props: true 
   },
+  { 
+    path: '/users/add', 
+    name: 'AddUser', 
+    component: UserDetails 
+  },
   {
     path: '/about',
     name: 'about',

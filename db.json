@@ -1,11 +1,52 @@
 {
-    "users":[
-        {"id": 7, "firstName":"Bob", "lastName":"Smith", "email":"bob@smith.com", "password":"test", "roleId":1, "active": true},
-        {"id": 96, "firstName":"Betty", "lastName":"Smith", "email":"betty@smith.com", "password":"test", "roleId":2, "active": true},
-        {"id": 33, "firstName":"Barney", "lastName":"Smith", "email":"barney@smith.com", "password":"test", "roleId":1, "active": false}
-    ],
-    "roles":[
-        {"id": 1, "name": "Standard User", "description": "A standard user"},
-        {"id": 2, "name": "Admin", "description": "A user with elevated permissions"}
-    ]
+  "users": [
+    {
+      "id": 7,
+      "firstName": "BOBBY ",
+      "lastName": "SHMURDA",
+      "email": "bob@smith.com",
+      "password": "test",
+      "roleId": 1,
+      "active": true
+    },
+    {
+      "id": 96,
+      "firstName": "BOUNCIN",
+      "lastName": "BETTY",
+      "email": "betty@smith.com",
+      "password": "test",
+      "roleId": 2,
+      "active": true
+    },
+    {
+      "id": 33,
+      "firstName": "Barney",
+      "lastName": "Smith",
+      "email": "barney@smith.com",
+      "password": "test",
+      "roleId": 1,
+      "active": false
+    },
+    {
+      "id": 97,
+      "firstName": "BIG",
+      "lastName": "SCARR",
+      "email": "bigscarr@moneyrecords.com",
+      "password": "123",
+      "roleId": 2,
+      "active": false
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Standard User",
+      "description": "A standard user"
+    },
+    {
+      "id": 2,
+      "name": "Admin",
+      "description": "A user with elevated permissions"
+    }
+  ]
 }
