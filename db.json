@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 7,
-      "firstName": "BOBBY ",
-      "lastName": "SHMURDA",
+      "firstName": "asdf",
+      "lastName": "",
       "email": "bob@smith.com",
       "password": "test",
       "roleId": 1,
@@ -11,10 +11,10 @@
     },
     {
       "id": 96,
-      "firstName": "BOUNCIN",
-      "lastName": "BETTY",
-      "email": "betty@smith.com",
-      "password": "test",
+      "firstName": "asdfa",
+      "lastName": "asdfa",
+      "email": "asdfasfd@adsf.com",
+      "password": "adsf",
       "roleId": 2,
       "active": true
     },
@@ -35,6 +35,15 @@
       "password": "123",
       "roleId": 2,
       "active": false
+    },
+    {
+      "id": 98,
+      "firstName": "asfda",
+      "lastName": "dfasdf",
+      "email": "asdfadsf",
+      "password": "asdf",
+      "roleId": 2,
+      "active": true
     }
   ],
   "roles": [
