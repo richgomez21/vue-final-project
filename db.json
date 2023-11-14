@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 7,
-      "firstName": "asdf",
-      "lastName": "",
+      "firstName": "Bob",
+      "lastName": "Smith",
       "email": "bob@smith.com",
       "password": "test",
       "roleId": 1,
