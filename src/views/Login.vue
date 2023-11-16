@@ -21,6 +21,7 @@
 import {login} from '../api.js'
 
 export default {
+    inject: ['GStore'],
     data(){
         return {
             email: "",
@@ -32,8 +33,11 @@ export default {
             if(this.validate()){
                 login(this.email, this.password).then(user => {
                     if(user){
-                        alert("AUTHENTICATED!");
-                        console.log(user);
+                        // alert("AUTHENTICATED!");
+                        // console.log(user);
+                        this.GStore.currentUser = user;
+                        sessionStorage.setItem("currentUser", JSON.stringify(user));
+                        this.$router.push({name: "home"});
                     }else{
                         alert("LOGIN FAILED!");
                     }

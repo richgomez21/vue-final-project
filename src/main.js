@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp,  reactive } from 'vue';
 import App from './App.vue';
 import router from './router';
 
@@ -8,4 +8,8 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "./assets/main.css";
 
-createApp(App).use(router).mount('#app')
+const userJSON = sessionStorage.getItem("currentUser")
+const user = userJSON ? JSON.parse(userJSON) : null;
+const GStore = reactive({ currentUser: user });
+
+createApp(App).use(router).provide('GStore', GStore).mount('#app');

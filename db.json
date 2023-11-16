@@ -11,10 +11,10 @@
     },
     {
       "id": 96,
-      "firstName": "asdfa",
-      "lastName": "asdfa",
-      "email": "asdfasfd@adsf.com",
-      "password": "adsf",
+      "firstName": "Betty",
+      "lastName": "Smith",
+      "email": "b@s.com",
+      "password": "test",
       "roleId": 2,
       "active": true
     },
@@ -31,17 +31,17 @@
       "id": 97,
       "firstName": "BIG",
       "lastName": "SCARR",
-      "email": "bigscarr@moneyrecords.com",
+      "email": "bigscarr@1017.com",
       "password": "123",
-      "roleId": 2,
+      "roleId": 3,
       "active": false
     },
     {
       "id": 98,
-      "firstName": "asfda",
-      "lastName": "dfasdf",
-      "email": "asdfadsf",
-      "password": "asdf",
+      "firstName": "Jon",
+      "lastName": "Jones",
+      "email": "bones@jones.com",
+      "password": "champ",
       "roleId": 2,
       "active": true
     }
@@ -56,6 +56,11 @@
       "id": 2,
       "name": "Admin",
       "description": "A user with elevated permissions"
+    },
+    {
+      "id": 3,
+      "name": "CEO",
+      "description": "BOSSMAN"
     }
   ]
 }
