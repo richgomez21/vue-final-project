@@ -53,10 +53,14 @@ export default {
     },
     mounted(){
 
+        if(this.$route.name != "AddUser" && isNaN(this.userId)){
+            this.$router.push({name:"NotFound"})
+        }
+
         getAllRoles().then(roles => this.roles = roles);
 
         if(this.userId > 0){
-            getUserById(this.userId).then(user => this.user = user);
+            getUserById(this.userId).then(user => this.user = user).catch(err => this.$router.push({name:"NotFound"}));
         }else{
             // if the userId prop was not passed in, then we are creating a new empty user
             this.user = {id:0, firstName:"", lastName:"", email:"", password:"", roleId:1, active: true};

@@ -1,30 +1,20 @@
 <template>
-  <nav>
-    <span v-if="GStore.currentUser">
-      <b>Welcome Back, {{GStore.currentUser.firstName}} {{GStore.currentUser.lastName}}.. &nbsp;</b>
-    </span>
-    <router-link :to="{name:'home'}">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link :to="{name: 'UserList'}" v-if="GStore.currentUser?.roleId == 2">
-      Users
-    </router-link> |
-    <router-link v-if="!GStore.currentUser" :to="{name: 'Login'}">Login</router-link>
-    <a v-else @click="logout" href="#">Log Out</a>
-  </nav>
-  <router-view/>
+  <nav-bar></nav-bar>
+  <div class="container-lg pt-3">
+    <router-view/>
+  </div>
+
+  <div class="container-fluid bg-dark fixed-bottom text-white">
+    <div class="container-lg pt3">
+      <footer> &#169; Richard Gomez 2023</footer>
+    </div>
+  </div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar.vue';
 export default {
-  inject: ['GStore'],
-  methods:{
-  	logout(evt){
-    	evt.preventDefault();
-    	this.GStore.currentUser = null;
-    	sessionStorage.removeItem("currentUser");
-      this.$router.push({name:"Login"});
-  	}
-  }
+  components: { NavBar },
 }
 </script>
 
