@@ -1,23 +1,28 @@
 <template>
     <div class="user-list">
-        <button @click="$router.push({name: 'AddUser' })">Add New User</button>
-        <table border="10">
-            <tr>
-                <th>User</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Active</th>
-                <th></th>
-            </tr>
-            <tr v-for="u in users" :key="u.id">
-                <td>{{u.firstName + " " + u.lastName}}</td>
-                <td>{{u.email}}</td>
-                <td>{{getRoleNameById(u.roleId)}}</td>
-                <td>{{u.active ? "yes" : "no"}}</td>
-                <td>
-                    <button @click="editUser(u.id)">Edit</button>
-                </td>
-            </tr>
+        <button type="button" class="btn btn-dark" @click="$router.push({name: 'AddUser' })">Add New User</button>
+        <br><br>
+        <table align="center" class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">User</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Active</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="u in users" :key="u.id">
+                    <td>{{u.firstName + " " + u.lastName}}</td>
+                    <td>{{u.email}}</td>
+                    <td>{{getRoleNameById(u.roleId)}}</td>
+                    <td>{{u.active ? "yes" : "no"}}</td>
+                    <td>
+                        <button type="button" class="btn btn-secondary" @click="editUser(u.id)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </template>
@@ -49,9 +54,6 @@ export default {
 }
 </script>
 
-<style scoped>
-  table{
-    background-color: grey;
-    border-color: black;
-  }
+<style>
+ 
 </style>

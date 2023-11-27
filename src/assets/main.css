@@ -1,1 +1,51 @@
-body{ background-color: rgb(96, 114, 96);}
+/* NIALS DEFAULT CODE  */
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+  
+nav {
+    padding: 10px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border-radius: 100%;
+}
+  
+nav a {
+    font-weight: bold;
+    color: #2c3e50;
+}
+  
+nav a.router-link-exact-active {
+    color: #42b983;
+
+}
+/* NIALS DEFAULT CODE  */
+
+body{ 
+    background-color: rgb(96, 114, 96);
+}
+
+
+nav a {
+    font-size: 25px;
+}
+
+
+
+.greetH3{
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    border: red;
+}
+
+.home h1{
+    font-weight: bold;
+    
+}
