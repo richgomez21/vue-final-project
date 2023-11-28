@@ -6,7 +6,7 @@
 
   <div class="container-fluid bg-dark fixed-bottom text-white">
     <div class="container-lg pt3">
-      <footer> &#169; Richard Gomez 2023</footer>
+      <footer class="text-start"> &#169; Richard Gomez 2023</footer>
     </div>
   </div>
 </template>

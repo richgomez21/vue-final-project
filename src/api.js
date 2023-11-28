@@ -11,6 +11,14 @@ export function getAllUsers(){
     return ax.get("users/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Users:" + error));
 }
 
+export function getAllArtists(){
+    return ax.get("artists/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Artists:" + error));
+}
+
+export function getAllAlbums(){
+    return ax.get("albums/").then(resp => (resp.data)).catch(error => errorHandler("Error Getting All Albums:" + error));
+}
+
 export function getAllRoles() {
     return ax.get("roles/").then(resp => (resp.data)).catch((error) => errorHandler("Error Getting All Roles:" + error));
 }

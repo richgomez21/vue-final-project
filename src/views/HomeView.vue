@@ -2,7 +2,7 @@
   <div class="home">
     <img class="rotate-horizontal" alt="Trap logo" src="../assets/trap.png" width="400" height="150">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <h1>BEST PLACE FOR TRAP MUSIC</h1>
+    <h1>TRENDING TRAP MUSIC</h1>
   </div>
 </template>
 
