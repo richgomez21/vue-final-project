@@ -5,7 +5,10 @@ import UserDetails from '../views/UserDetails.vue'
 import Login from '../views/Login.vue'
 import NotFound from '../views/NotFound.vue'
 import Artists from '../views/Artists.vue'
+import ArtistDetails from '../views/ArtistDetails.vue'
 import Albums from '../views/Albums.vue'
+import AlbumDetails from  '../views/AlbumDetails.vue'
+
 
 const routes = [
   {
@@ -21,18 +24,6 @@ const routes = [
     meta: {title: "Peoples"}
   },
   { 
-    path: '/users', 
-    name: 'Artists', 
-    component: Artists,
-    meta: {title: "Artists"}
-  },
-  { 
-    path: '/users', 
-    name: 'Albums', 
-    component: Albums,
-    meta: {title: "Albums"}
-  },
-  { 
     path: '/users/:userId', 
     name: 'UserDetails', 
     component: UserDetails, 
@@ -45,6 +36,47 @@ const routes = [
     component: UserDetails,
     meta: {title: "Add New PPl"}
   },
+  //////////////////////////////
+  { 
+    path: '/artists', 
+    name: 'Artists', 
+    component: Artists,
+    meta: {title: "Artists"}
+  },
+  { 
+    path: '/artists/:artistId', 
+    name: 'ArtistDetails', 
+    component: ArtistDetails, 
+    props: true,
+    meta: {title: "ArtistDetails"}
+  },
+  { 
+    path: '/artists/add', 
+    name: 'AddArtist', 
+    component: ArtistDetails,
+    meta: {title: "Add New Artist"}
+  },
+  ///////////////////////////////////////////
+  { 
+    path: '/albums', 
+    name: 'Albums', 
+    component: Albums,
+    meta: {title: "Albums"}
+  },
+  { 
+    path: '/albums/:albumId', 
+    name: 'AlbumDetails', 
+    component: AlbumDetails, 
+    props: true,
+    meta: {title: "AlbumDetails"}
+  },
+  { 
+    path: '/albums/add', 
+    name: 'AddAlbum', 
+    component: AlbumDetails,
+    meta: {title: "Add New Album"}
+  },
+  //////////////////////////////////////
   { 
     path: '/login', 
     name: 'Login', 

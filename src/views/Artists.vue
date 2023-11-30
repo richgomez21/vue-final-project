@@ -6,18 +6,22 @@
           <thead>
               <tr>
                   <th scope="col">Artist</th>
-                  <th scope="col">Email</th>
+                  <th scope="col">StageName</th>
+                  <th scope="col">FirstName</th>
+                  <th scope="col">LastName</th>
                   <th scope="col">Genre</th>
-                  <th scope="col">Active</th>
+                  
                   <th></th>
               </tr>
           </thead>
           <tbody>
               <tr v-for="artist in artists" :key="artist.id">
-                  <td>{{ artist.name }}</td>
-                  <td>{{ artist.email }}</td>
-                  <td>{{ getGenreNameById(artist.genreId) }}</td>
-                  <td>{{ artist.active ? 'yes' : 'no' }}</td>
+                  <td>{{ artist.id }}</td>
+                  <td>{{ artist.stageName }}</td>
+                  <td>{{ artist.firstName }}</td>
+                  <td>{{ artist.lastName }}</td>
+                  <td>{{artist.genre }}</td>
+                
                   <td>
                       <button type="button" class="btn btn-secondary" @click="editArtist(artist.id)">Edit</button>
                   </td>
@@ -28,25 +32,18 @@
 </template>
 
 <script>
-import { getAllArtists, getAllGenres } from "@/api";
+import { getAllArtists } from "@/api";
 
 export default {
   data() {
       return {
           artists: [],
-          genres: [],
       };
   },
   mounted() {
       getAllArtists().then((artists) => (this.artists = artists));
-      getAllGenres().then((genres) => (this.genres = genres));
   },
   methods: {
-      getGenreNameById(id) {
-          const genre = this.genres.find((g) => g.id == id);
-          return genre?.name;
-          // Note the nullish operator - This method might get called before genres have been fetched.
-      },
       editArtist(id) {
           this.$router.push({ name: 'ArtistDetails', params: { artistId: id } });
       },

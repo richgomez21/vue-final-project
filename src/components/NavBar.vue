@@ -3,8 +3,9 @@
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark text-light container-fluid">
       <div class="container-lg">
         <i class="bi bi-music-note-beamed" style="font-size: 2.4rem;"></i>
+        <h3>Rap Wrapped</h3>
         <span v-if="GStore.currentUser">
-          <h3 class="greetH3">Welcome Back, {{GStore.currentUser.firstName}} {{GStore.currentUser.lastName}}.. &nbsp;</h3>
+          <h4 class="greetH3">Welcome Back, {{GStore.currentUser.firstName}} {{GStore.currentUser.lastName}}.. &nbsp;</h4>
         </span>
 
         <!-- toggle button for mobile nav -->
@@ -30,13 +31,13 @@
             </li>
 
             <li class="nav-item">
-              <router-link class="nav-link" :to="{name: 'Artists'}" v-if="GStore.currentUser?.roleId == 2 || 1">
+              <router-link class="nav-link" :to="{name: 'Artists'}" v-if="GStore.currentUser">
                 <span data-bs-toggle="collapse" data-bs-target="#main-nav">Artists</span>
               </router-link>
               
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" :to="{name: 'Albums'}" v-if="GStore.currentUser?.roleId == 2 || 1">
+              <router-link class="nav-link" :to="{name: 'Albums'}" v-if="GStore.currentUser">
                 Albums
               </router-link>
             </li>
