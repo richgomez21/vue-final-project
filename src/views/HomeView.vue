@@ -4,7 +4,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h1>TRENDING TRAP MUSIC</h1>
     <h3>Keep up with all your favorite Trap artists here</h3>
-    <img src="../assets/rap.png" alt="rap concert" width="700">
+    <img class="container-fluid" src="../assets/rap.png" alt="rap concert" width="700">
   </div>
 </template>
 

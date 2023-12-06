@@ -2,11 +2,15 @@
     <div class="container-fluid bg-dark" id="top">
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark text-light container-fluid">
       <div class="container-lg">
-        <i class="bi bi-music-note-beamed" style="font-size: 2.4rem;"></i>
-        <h3>Rap Wrapped</h3>
-        <span v-if="GStore.currentUser">
-          <h4 class="greetH3">Welcome Back, {{GStore.currentUser.firstName}} {{GStore.currentUser.lastName}}.. &nbsp;</h4>
-        </span>
+
+        <div v-if="GStore.currentUser" class="text-start">
+          <h4 class="greetH3">Welcome Back, {{ GStore.currentUser.firstName }}.. &nbsp;</h4>
+        </div>
+
+        <router-link class="navbar-brand text-center" :to="{ name: 'home' }">
+          <i class="bi bi-music-note-beamed" style="font-size: 2.4rem;"></i>
+          <h3 class="d-inline">Rap Wrapped</h3>
+        </router-link>
 
         <!-- toggle button for mobile nav -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">

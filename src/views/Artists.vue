@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { getAllArtists } from "@/api";
+import { getAllArtists} from "@/api";
 
 export default {
   data() {
@@ -42,6 +42,7 @@ export default {
   },
   mounted() {
       getAllArtists().then((artists) => (this.artists = artists));
+    //   getUserById().then((users) => (this.users = users));
   },
   methods: {
       editArtist(id) {
