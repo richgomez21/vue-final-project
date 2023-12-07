@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 let apiURL = 'http://localhost:8888'    // FOR REQUESTS TO THE JSON SERVER
+// let apiURL = 'http://localhost/api'   // FOR REQUESTS TO THE DEV API PROJECT
 
 const ax = axios.create({
     baseURL: apiURL
@@ -67,8 +68,16 @@ export function login(email, password) {
 		}else{
 			return null
 		}
-	}).catch((error) => errorHandler(error));
+	});
 }
+
+// export function logout(){
+//     if(apiURL == "http://localhost:8888"){
+//         return;
+//     }else{
+//         return ax.get("logout/");
+//     }
+// }
 
 function errorHandler(msg){
     console.log("API ERROR", msg);
